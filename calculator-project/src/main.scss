@@ -1,0 +1,13 @@
+@use "./variables" as *;
+@use "./mainSection";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/calculator-project/img/pencil-3318160_1920.jpg");
+    background-size: cover;
+}
