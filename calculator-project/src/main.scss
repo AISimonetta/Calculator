@@ -9,6 +9,7 @@
 
 body {
     background-image: url("../img/pencil-3318160_1920.jpg");
+    backdrop-filter: grayscale(60%);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -16,4 +17,5 @@ body {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    font-family: $main-font;
 }

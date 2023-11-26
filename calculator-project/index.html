@@ -5,45 +5,46 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator Project | Alejandra Simonetta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
   </head>
   <body>
-    <main class="main">
-      <div class="main__inputs">
-        <label class="main__label">Display:</label>
-        <input class="main__input main__input--userInput" type="number">
-        <label class="main__label">Total:</label>
-        <input class="main--input main__input--total" type="number">
+      <div class="main">
+        <div class="main__inputs">
+          <input class="main__input main__input--userInput" placeholder="0">
+          <input class="main--input main__input--total" placeholder="total">  
+        </div>
+        <div class="main__buttons">
+          <button class="main__btn1 main__btn1--acClearSign">AC</button>
+          <button class="main__btn1 main__btn1--signChange">+/-</button>
+          <button class="main__btn1 main__btn1--percentageSign">%</button>
+          <button class="main__btn1 main__btn1--divideSign">/</button>
+        </div>
+        <div class="main__buttons">
+          <button class="main__btn2 main__btn2--numSeven">7</button>
+          <button class="main__btn2 main__btn2--numEight">8</button>
+          <button class="main__btn2 main__btn2--numNine">9</button>
+          <button class="main__btn2 main__btn2--multiplySign">X</button>
+        </div>
+        <div class="main__buttons">
+          <button class="main__btn3 main__btn3--numFour">4</button>
+          <button class="main__btn3 main__btn3--numFive">5</button>
+          <button class="main__btn3 main__btn3--numSix">6</button>
+          <button class="main__btn3 main__btn3--subtractSign">-</button>
+        </div>
+        <div class="main__buttons">
+          <button class="main__btn4 main__btn4--numOne">1</button>
+          <button class="main__btn4 main__btn4--numTwo">2</button>
+          <button class="main__btn4 main__btn4--numThree">3</button>
+          <button class="main__btn4 main__btn4--addSign">+</button>
+        </div>
+        <div class="main__buttons">
+          <button class="main__btn5 main__btn5--numZero">0</button>
+          <button class="main__btn5 main__btn5--decimalSign">.</button>
+          <button class="main__btn5 main__btn5--equalSign">=</button>
+        </div>
       </div>
-      <div class="main__buttons">
-        <button class="main__btn main__btn--acClearSign">AC</button>
-        <button class="main__btn main__btn--signChange">+/-</button>
-        <button class="main__btn main__btn--percentageSign">%</button>
-        <button class="main__btn main__btn--divideSign">/</button>
-      </div>
-      <div class="main__buttons">
-        <button class="main__btn main__btn--numSeven">7</button>
-        <button class="main__btn main__btn--numEight">8</button>
-        <button class="main__btn main__btn--numNine">9</button>
-        <button class="main__btn main__btn--multiplySign">X</button>
-      </div>
-      <div class="main__buttons">
-        <button class="main__btn main__btn--numFour">4</button>
-        <button class="main__btn main__btn--numFive">5</button>
-        <button class="main__btn main__btn--numSix">6</button>
-        <button class="main__btn main__btn--subtractSign">-</button>
-      </div>
-      <div class="main__buttons">
-        <button class="main__btn main__btn--numOne">1</button>
-        <button class="main__btn main__btn--numTwo">2</button>
-        <button class="main__btn main__btn--numThree">3</button>
-        <button class="main__btn main__btn--addSign">+</button>
-      </div>
-      <div class="main__buttons">
-        <button class="main__btn main__btn--numZero">0</button>
-        <button class="main__btn main__btn--decimalSign">.</button>
-        <button class="main__btn main__btn--equalSign">=</button>
-      </div>
-    </main>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
