@@ -6,7 +6,7 @@
         height: 60vh;
         width: 150px;
         background-color: $offWhite-color;
-        border: 0.2px solid $mediumGrey-color;
+        border: 0.1px solid $darkGrey-color;
         border-radius: 20px;
         box-shadow: 10px 5px 5px #aba9a395;
         padding: 12px 12px;
@@ -39,6 +39,7 @@
                 border: 10px;
                 font-family: $main-font;
                 margin: 0px 0.7px;
+                border: 0.2px solid $mediumGrey-color;
             }
         }
 
@@ -90,11 +91,186 @@
 }
 
 //TABLET
-// @media screen and (min-width: 768px){
-    
-// }
+@media screen and (min-width: 768px){
+    .main {
+        height: 80vh;
+        width: 190px;
+        background-color: $offWhite-color;
+        border: 0.1px solid $darkGrey-color;
+        border-radius: 20px;
+        box-shadow: 10px 5px 5px #aba9a395;
+        padding: 12px 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+        input {
+            box-sizing: border-box;
+            width: 100% ;
+            border: none;
+            height: 35px;
+            font-family: $main-font;
+            font-size: 1em;
+            text-align: end;
+            padding-right: 5px;
+            border:0.2px solid $lightGrey-color;
+            }
+        
+        &__input--userInput {
+            margin-bottom: 2.5px;
+            }
+
+        &__buttons {
+            display: flex;
+            justify-content: space-around;
+            
+            button {
+                width: 100%;
+                height: 40px;
+                border: 10px;
+                font-family: $main-font;
+                font-size: large;
+                margin: 0px 0.7px;
+                border: 0.1px solid $darkGrey-color;
+            }
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        &__btn1 {
+            color: $white-color;
+            background-color: $darkGrey-color;
+        }
+
+        &__btn2 {
+            color: $black-color;
+            background-color: $white-color;
+
+            &--multiplySign {
+                color:  $white-color;
+                background-color: $skin-colour;
+            }
+        }
+
+        &__btn3 {
+            color: $black-color;
+            background-color: $white-color;
+
+            &--subtractSign {
+                color:  $white-color;
+                background-color: $skin-colour;
+            }
+        }
+
+        &__btn4 {
+            color: $black-color;
+            background-color: $white-color;
+
+            &--addSign {
+                color:  $white-color;
+                background-color: $skin-colour;
+            }
+        }
+
+        &__btn5 {
+            color: $black-color;
+            background-color: $skinLight-colour;
+        }
+    }
+}
+
 
 //DESKTOP
-// @media screen and (min-width:1440px){
+@media screen and (min-width:1440px){
+    .main {
+        height: 90vh;
+        width: 250px;
+        background-color: $offWhite-color;
+        border: 0.1px solid $darkGrey-color;
+        border-radius: 20px;
+        box-shadow: 10px 5px 5px #aba9a395;
+        padding: 12px 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+        input {
+            box-sizing: border-box;
+            width: 100% ;
+            border: none;
+            height: 45px;
+            font-family: $main-font;
+            font-size: 1.6em;
+            text-align: end;
+            padding-right: 5px;
+            border:0.1px solid $lightGrey-color;
+            }
+        
+        &__input--userInput {
+            margin-bottom: 2.5px;
+            }
     
-// }
+        &__buttons {
+            display: flex;
+            justify-content: space-around;
+            
+            button {
+                width: 100%;
+                height: 50px;
+                border: 10px;
+                font-family: $main-font;
+                font-size: 1.5em;
+                margin: 0px 0.7px;
+                border: 0.3px solid $darkGrey-color;
+            }
+        }
+    
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+    
+        &__btn1 {
+            color: $white-color;
+            background-color: $darkGrey-color;
+        }
+    
+        &__btn2 {
+            color: $black-color;
+            background-color: $white-color;
+    
+            &--multiplySign {
+                color:  $white-color;
+                background-color: $skin-colour;
+            }
+        }
+    
+        &__btn3 {
+            color: $black-color;
+            background-color: $white-color;
+    
+            &--subtractSign {
+                color:  $white-color;
+                background-color: $skin-colour;
+            }
+        }
+    
+        &__btn4 {
+            color: $black-color;
+            background-color: $white-color;
+    
+            &--addSign {
+                color:  $white-color;
+                background-color: $skin-colour;
+            }
+        }
+    
+        &__btn5 {
+            color: $black-color;
+            background-color: $skinLight-colour;
+        }
+    }
+}
