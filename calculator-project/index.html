@@ -13,36 +13,36 @@
       <div class="main">
         <div class="main__inputs">
           <input class="main__input main__input--userInput" placeholder="0">
-          <input class="main--input main__input--total" placeholder="total">  
+          <input class="main--input main__input--total" placeholder="total">
         </div>
         <div class="main__buttons">
-          <button class="main__btn1 main__btn1--acClearSign">AC</button>
-          <button class="main__btn1 main__btn1--signChange">+/-</button>
-          <button class="main__btn1 main__btn1--percentageSign">%</button>
-          <button class="main__btn1 main__btn1--divideSign">/</button>
+          <button class="main__btn1 main__btn1--acClearSign" data-action="clear">C</button>
+          <button id="operatorBtn" class="main__btn1 main__btn1--signChange">+/-</button>
+          <button id="operatorBtn" class="main__btn1 main__btn1--percentageSign">%</button>
+          <button id="operatorBtn" class="main__btn1 main__btn1--divideSign" data-action="divide">/</button>
         </div>
         <div class="main__buttons">
-          <button class="main__btn2 main__btn2--numSeven">7</button>
-          <button class="main__btn2 main__btn2--numEight">8</button>
-          <button class="main__btn2 main__btn2--numNine">9</button>
-          <button class="main__btn2 main__btn2--multiplySign">X</button>
+          <button class="main__btn2 main__btn2--num">7</button>
+          <button class="main__btn2 main__btn2--num">8</button>
+          <button class="main__btn2 main__btn2--num">9</button>
+          <button id="operatorBtn" class="main__btn2 main__btn2--multiplySign" data-action="multiply">X</button>
         </div>
         <div class="main__buttons">
-          <button class="main__btn3 main__btn3--numFour">4</button>
-          <button class="main__btn3 main__btn3--numFive">5</button>
-          <button class="main__btn3 main__btn3--numSix">6</button>
-          <button class="main__btn3 main__btn3--subtractSign">-</button>
+          <button class="main__btn3 main__btn3--num">4</button>
+          <button class="main__btn3 main__btn3--num">5</button>
+          <button class="main__btn3 main__btn3--num">6</button>
+          <button id="operatorBtn" class="main__btn3 main__btn3--subtractSign" data-action="subtract">-</button>
         </div>
         <div class="main__buttons">
-          <button class="main__btn4 main__btn4--numOne">1</button>
-          <button class="main__btn4 main__btn4--numTwo">2</button>
-          <button class="main__btn4 main__btn4--numThree">3</button>
-          <button class="main__btn4 main__btn4--addSign">+</button>
+          <button class="main__btn4 main__btn4--num">1</button>
+          <button class="main__btn4 main__btn4--num">2</button>
+          <button class="main__btn4 main__btn4--num">3</button>
+          <button id="operatorBtn" class="main__btn4 main__btn4--addSign" data-action="add">+</button>
         </div>
         <div class="main__buttons">
-          <button class="main__btn5 main__btn5--numZero">0</button>
-          <button class="main__btn5 main__btn5--decimalSign">.</button>
-          <button class="main__btn5 main__btn5--equalSign">=</button>
+          <button class="main__btn5 main__btn5--num">0</button>
+          <button class="main__btn5 main__btn5--decimalSign" data-action="decimal">.</button>
+          <button class="main__btn5 main__btn5--equalSign" data-action="calculate" >=</button>
         </div>
       </div>
     <script type="module" src="/src/main.ts"></script>
