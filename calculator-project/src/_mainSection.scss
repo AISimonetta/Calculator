@@ -1,98 +1,95 @@
 @use "./variables" as *;
 
-//MOBILE S
-@media screen and (min-width: 320px){
-    .main {
-        height: 60vh;
-        width: 150px;
-        background-color: $offWhite-color;
-        border: 0.1px solid $darkGrey-color;
-        border-radius: 20px;
-        box-shadow: 10px 5px 5px #aba9a395;
-        padding: 12px 12px;
+.calculator {
+    height: 60vh;
+    width: 150px;
+    background-color: $offWhite-color;
+    border: 0.1px solid $darkGrey-color;
+    border-radius: 20px;
+    box-shadow: 10px 5px 5px #aba9a395;
+    padding: 12px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    input {
+        box-sizing: border-box;
+        width: 100% ;
+        border: none;
+        height: 25px;
+        font-family: $main-font;
+        text-align: end;
+        padding-right: 5px;
+        border:0.2px solid $lightGrey-color;
+    }
+
+    &__input--userInput {
+        margin-bottom: 2.5px;
+    }
+
+    &__buttons {
         display: flex;
-        flex-direction: column;
         justify-content: space-around;
-        
-        input {
-            box-sizing: border-box;
-            width: 100% ;
-            border: none;
-            height: 25px;
+
+        button {
+            width: 100%;
+            height: 30px;
+            border: 10px;
             font-family: $main-font;
-            text-align: end;
-            padding-right: 5px;
-            border:0.2px solid $lightGrey-color;
-          }
-        
-        &__input--userInput {
-            margin-bottom: 2.5px;
-          }
-
-        &__buttons {
-            display: flex;
-            justify-content: space-around;
-            
-            button {
-                width: 100%;
-                height: 30px;
-                border: 10px;
-                font-family: $main-font;
-                margin: 0px 0.7px;
-                border: 0.2px solid $mediumGrey-color;
-            }
+            margin: 0px 0.7px;
+            border: 0.2px solid $mediumGrey-color;
         }
+    }
 
-        button:hover {
-            background-color: black;
-            color: white;
+    button:hover {
+        background-color: black;
+        color: white;
+    }
+
+    &__btnFirstRow {
+        color: $white-color;
+        background-color: $darkGrey-color;
+    }
+
+    &__btnSecRow {
+        color: $black-color;
+        background-color: $white-color;
+
+        &--multiplySign {
+            color:  $white-color;
+            background-color: $skin-colour;
         }
+    }
 
-        &__btn1 {
-            color: $white-color;
-            background-color: $darkGrey-color;
+    &__btnThirdRow {
+        color: $black-color;
+        background-color: $white-color;
+
+        &--subtractSign {
+            color:  $white-color;
+            background-color: $skin-colour;
         }
+    }
 
-        &__btn2 {
-            color: $black-color;
-            background-color: $white-color;
+    &__btnFourthRow {
+        color: $black-color;
+        background-color: $white-color;
 
-            &--multiplySign {
-                color:  $white-color;
-                background-color: $skin-colour;
-            }
+        &--addSign {
+            color:  $white-color;
+            background-color: $skin-colour;
         }
+    }
 
-        &__btn3 {
-            color: $black-color;
-            background-color: $white-color;
-
-            &--subtractSign {
-                color:  $white-color;
-                background-color: $skin-colour;
-            }
-        }
-
-        &__btn4 {
-            color: $black-color;
-            background-color: $white-color;
-
-            &--addSign {
-                color:  $white-color;
-                background-color: $skin-colour;
-            }
-        }
-
-        &__btn5 {
-            color: $black-color;
-            background-color: $skinLight-colour;
-        }
+    &__btnFifthRow {
+        color: $black-color;
+        background-color: $skinLight-colour;
     }
 }
 
 //TABLET
 @media screen and (min-width: 768px){
-    .main {
+    .calculator {
         height: 80vh;
         width: 190px;
         background-color: $offWhite-color;
@@ -103,7 +100,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        
+
         input {
             box-sizing: border-box;
             width: 100% ;
@@ -115,7 +112,7 @@
             padding-right: 5px;
             border:0.2px solid $lightGrey-color;
             }
-        
+
         &__input--userInput {
             margin-bottom: 2.5px;
             }
@@ -123,7 +120,7 @@
         &__buttons {
             display: flex;
             justify-content: space-around;
-            
+
             button {
                 width: 100%;
                 height: 40px;
@@ -140,12 +137,12 @@
             color: white;
         }
 
-        &__btn1 {
+        &__btnFirstRow {
             color: $white-color;
             background-color: $darkGrey-color;
         }
 
-        &__btn2 {
+        &__btnSecRow {
             color: $black-color;
             background-color: $white-color;
 
@@ -155,7 +152,7 @@
             }
         }
 
-        &__btn3 {
+        &__btnThirdRow {
             color: $black-color;
             background-color: $white-color;
 
@@ -165,7 +162,7 @@
             }
         }
 
-        &__btn4 {
+        &__btnFourthRow {
             color: $black-color;
             background-color: $white-color;
 
@@ -175,7 +172,7 @@
             }
         }
 
-        &__btn5 {
+        &__btnFifthRow {
             color: $black-color;
             background-color: $skinLight-colour;
         }
@@ -185,7 +182,7 @@
 
 //DESKTOP
 @media screen and (min-width:1440px){
-    .main {
+    .calculator {
         height: 90vh;
         width: 250px;
         background-color: $offWhite-color;
@@ -196,7 +193,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        
+
         input {
             box-sizing: border-box;
             width: 100% ;
@@ -208,15 +205,15 @@
             padding-right: 5px;
             border:0.1px solid $lightGrey-color;
             }
-        
+
         &__input--userInput {
             margin-bottom: 2.5px;
-            }
-    
+        }
+
         &__buttons {
             display: flex;
             justify-content: space-around;
-            
+
             button {
                 width: 100%;
                 height: 50px;
@@ -227,50 +224,50 @@
                 border: 0.3px solid $darkGrey-color;
             }
         }
-    
+
         button:hover {
             background-color: black;
             color: white;
         }
-    
-        &__btn1 {
+
+        &__btnFirstRow {
             color: $white-color;
             background-color: $darkGrey-color;
         }
-    
-        &__btn2 {
+
+        &__btnSecRow {
             color: $black-color;
             background-color: $white-color;
-    
+
             &--multiplySign {
                 color:  $white-color;
                 background-color: $skin-colour;
             }
         }
-    
-        &__btn3 {
+
+        &__btnThirdRow {
             color: $black-color;
             background-color: $white-color;
-    
+
             &--subtractSign {
                 color:  $white-color;
                 background-color: $skin-colour;
             }
         }
-    
-        &__btn4 {
+
+        &__btnFourthRow {
             color: $black-color;
             background-color: $white-color;
-    
+
             &--addSign {
                 color:  $white-color;
                 background-color: $skin-colour;
             }
         }
-    
-        &__btn5 {
+
+        &__btnFifthRow {
             color: $black-color;
             background-color: $skinLight-colour;
         }
-    }    
+    }
 }

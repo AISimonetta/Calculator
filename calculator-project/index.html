@@ -10,39 +10,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
   </head>
   <body>
-      <div class="main">
-        <div class="main__inputs">
-          <input class="main__input main__input--userInput" placeholder="0">
-          <input class="main--input main__input--total" placeholder="total">
+      <div class="calculator">
+        <div class="calculator__inputs">
+          <input class="calculator__input calculator__input--userInput" value="" disabled>
+          <input class="calculator__input calculator__input--total" value="" disabled>
         </div>
-        <div class="main__buttons">
-          <button class="main__btn1 main__btn1--acClearSign" data-action="clear">C</button>
-          <button id="operatorBtn" class="main__btn1 main__btn1--signChange">+/-</button>
-          <button id="operatorBtn" class="main__btn1 main__btn1--percentageSign">%</button>
-          <button id="operatorBtn" class="main__btn1 main__btn1--divideSign" data-action="divide">/</button>
+        <div class="calculator__buttons">
+          <button class="calculator__btnFirstRow" id="btnClear">C</button>
+          <button class="calculator__btn calculator__btnFirstRow operator">%</button>
+          <button class="calculator__btn calculator__btnFirstRow" id="btnDivide">/</button>
         </div>
-        <div class="main__buttons">
-          <button class="main__btn2 main__btn2--num">7</button>
-          <button class="main__btn2 main__btn2--num">8</button>
-          <button class="main__btn2 main__btn2--num">9</button>
-          <button id="operatorBtn" class="main__btn2 main__btn2--multiplySign" data-action="multiply">X</button>
+        <div class="calculator__buttons">
+          <button class="calculator__btn calculator__btnSecRow calculator__btnNum">7</button>
+          <button class="calculator__btn calculator__btnSecRow calculator__btnNum">8</button>
+          <button class="calculator__btn calculator__btnSecRow calculator__btnNum">9</button>
+          <button class="calculator__btn 
+                          calculator__btnSecRow 
+                          calculator__btnSecRow--multiplySign"
+                          id="btnSubstract"
+                          >X
+          </button>
         </div>
-        <div class="main__buttons">
-          <button class="main__btn3 main__btn3--num">4</button>
-          <button class="main__btn3 main__btn3--num">5</button>
-          <button class="main__btn3 main__btn3--num">6</button>
-          <button id="operatorBtn" class="main__btn3 main__btn3--subtractSign" data-action="subtract">-</button>
+        <div class="calculator__buttons">
+          <button class="calculator__btn calculator__btnThirdRow calculator__btnNum">4</button>
+          <button class="calculator__btn calculator__btnThirdRow calculator__btnNum">5</button>
+          <button class="calculator__btn calculator__btnThirdRow calculator__btnNum">6</button>
+          <button class="calculator__btn calculator__btnThirdRow--subtractSign" id="btnSubstract">-</button>
         </div>
-        <div class="main__buttons">
-          <button class="main__btn4 main__btn4--num">1</button>
-          <button class="main__btn4 main__btn4--num">2</button>
-          <button class="main__btn4 main__btn4--num">3</button>
-          <button id="operatorBtn" class="main__btn4 main__btn4--addSign" data-action="add">+</button>
+        <div class="calculator__buttons">
+          <button class="calculator__btn calculator__btnFourthRow calculator__btnNum">1</button>
+          <button class="calculator__btn calculator__btnFourthRow calculator__btnNum">2</button>
+          <button class="calculator__btn calculator__btnFourthRow calculator__btnNum">3</button>
+          <button class="calculator__btn calculator__btnFourthRow--addSign" id="btnAdd" >+</button>
         </div>
-        <div class="main__buttons">
-          <button class="main__btn5 main__btn5--num">0</button>
-          <button class="main__btn5 main__btn5--decimalSign" data-action="decimal">.</button>
-          <button class="main__btn5 main__btn5--equalSign" data-action="calculate" >=</button>
+        <div class="calculator__buttons">
+          <button class="calculator__btn calculator__btnFifthRow calculator__btnNum">0</button>
+          <button class="calculator__btn calculator__btnFifthRow operator" id="btnDecimal">.</button>
+          <button class="calculator__btn calculator__btnFifthRow operator" id="btnCalculate" >=</button>
         </div>
       </div>
     <script type="module" src="/src/main.ts"></script>
