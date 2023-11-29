@@ -12,41 +12,36 @@
   <body>
       <div class="calculator">
         <div class="calculator__inputs">
-          <input class="calculator__input calculator__input--userInput" value="" disabled>
-          <input class="calculator__input calculator__input--total" value="" disabled>
+          <input class="calculator__input calculator__input--userInput"  disabled>
+          <input class="calculator__input calculator__input--total"  disabled>
         </div>
         <div class="calculator__buttons">
           <button class="calculator__btnFirstRow" id="btnClear">C</button>
           <button class="calculator__btn calculator__btnFirstRow operator">%</button>
-          <button class="calculator__btn calculator__btnFirstRow" id="btnDivide">/</button>
+          <button class="calculator__btn calculator__btnFirstRow operator" id="btnDivide">/</button>
         </div>
         <div class="calculator__buttons">
-          <button class="calculator__btn calculator__btnSecRow calculator__btnNum">7</button>
-          <button class="calculator__btn calculator__btnSecRow calculator__btnNum">8</button>
-          <button class="calculator__btn calculator__btnSecRow calculator__btnNum">9</button>
-          <button class="calculator__btn 
-                          calculator__btnSecRow 
-                          calculator__btnSecRow--multiplySign"
-                          id="btnSubstract"
-                          >X
-          </button>
+          <button class="calculator__btnSecRow calculator__btnNum">7</button>
+          <button class="calculator__btnSecRow calculator__btnNum">8</button>
+          <button class="calculator__btnSecRow calculator__btnNum">9</button>
+          <button class="calculator__btnSecRow calculator__btnSecRow--multiplySign operator" id="btnMultiply">X</button>
         </div>
         <div class="calculator__buttons">
-          <button class="calculator__btn calculator__btnThirdRow calculator__btnNum">4</button>
-          <button class="calculator__btn calculator__btnThirdRow calculator__btnNum">5</button>
-          <button class="calculator__btn calculator__btnThirdRow calculator__btnNum">6</button>
-          <button class="calculator__btn calculator__btnThirdRow--subtractSign" id="btnSubstract">-</button>
+          <button class="calculator__btnThirdRow calculator__btnNum">4</button>
+          <button class="calculator__btnThirdRow calculator__btnNum">5</button>
+          <button class="calculator__btnThirdRow calculator__btnNum">6</button>
+          <button class="calculator__btnThirdRow--subtractSign operator" id="btnSubstract">-</button>
         </div>
         <div class="calculator__buttons">
-          <button class="calculator__btn calculator__btnFourthRow calculator__btnNum">1</button>
-          <button class="calculator__btn calculator__btnFourthRow calculator__btnNum">2</button>
-          <button class="calculator__btn calculator__btnFourthRow calculator__btnNum">3</button>
-          <button class="calculator__btn calculator__btnFourthRow--addSign" id="btnAdd" >+</button>
+          <button class="calculator__btnFourthRow calculator__btnNum">1</button>
+          <button class="calculator__btnFourthRow calculator__btnNum">2</button>
+          <button class="calculator__btnFourthRow calculator__btnNum">3</button>
+          <button class="calculator__btnFourthRow--addSign operator" id="btnAdd" >+</button>
         </div>
         <div class="calculator__buttons">
-          <button class="calculator__btn calculator__btnFifthRow calculator__btnNum">0</button>
-          <button class="calculator__btn calculator__btnFifthRow operator" id="btnDecimal">.</button>
-          <button class="calculator__btn calculator__btnFifthRow operator" id="btnCalculate" >=</button>
+          <button class="calculator__btnFifthRow calculator__btnNum">0</button>
+          <button class="calculator__btnFifthRow calculator__btnNum" id="btnDecimal">.</button>
+          <button class="calculator__btnFifthRow " id="btnCalculate" >=</button>
         </div>
       </div>
     <script type="module" src="/src/main.ts"></script>

@@ -1,7 +1,6 @@
 @use "./variables" as *;
 
 .calculator {
-    height: 60vh;
     width: 150px;
     background-color: $offWhite-color;
     border: 0.1px solid $darkGrey-color;
@@ -90,13 +89,12 @@
 //TABLET
 @media screen and (min-width: 768px){
     .calculator {
-        height: 80vh;
         width: 190px;
         background-color: $offWhite-color;
         border: 0.1px solid $darkGrey-color;
         border-radius: 20px;
         box-shadow: 10px 5px 5px #aba9a395;
-        padding: 12px 12px;
+        padding: 15px 15px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -183,13 +181,12 @@
 //DESKTOP
 @media screen and (min-width:1440px){
     .calculator {
-        height: 90vh;
         width: 250px;
         background-color: $offWhite-color;
         border: 0.1px solid $darkGrey-color;
         border-radius: 20px;
         box-shadow: 10px 5px 5px #aba9a395;
-        padding: 12px 12px;
+        padding: 18px 18px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;

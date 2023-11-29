@@ -1,100 +1,100 @@
 import "./main.scss"
 console.log("its running")
 
-const display = document.querySelector<HTMLInputElement>(".calculator__input--userInput")
-const displayTotal = document.querySelector<HTMLInputElement>(".calculator__input--total")
-const buttons = document.querySelectorAll<HTMLButtonElement>(".calculator__btn")
+const inputDisplay = document.querySelector<HTMLInputElement>(".calculator__input--userInput")
+const inputDisplayTotal = document.querySelector<HTMLInputElement>(".calculator__input--total")
 const number = document.querySelectorAll<HTMLButtonElement>('.calculator__btnNum')// number buttons
 const operator = document.querySelectorAll<HTMLButtonElement>('.operator')// number buttons
 const btnClear = document.querySelector<HTMLButtonElement>("#btnClear")
 const btnDecimal = document.querySelector<HTMLButtonElement>("#btnDecimal")
 const btnCalculate = document.querySelector<HTMLButtonElement>("#btnCalculate")
 
-
-if (!buttons || !display ||!displayTotal || !number ||!btnClear ||!operator || !btnDecimal ||!btnCalculate ) {
-    throw new Error("There is a prblem with the selector");
+if ( !inputDisplay ||!inputDisplayTotal || !number ||!btnClear || !operator ||
+     !btnDecimal ||!btnCalculate ) {
+    throw new Error("There is a problem with the selector");
 }
-let num1 = '';
-let num2 = '';
+let num1input = '';
+let num2input = '';
 let operators = '';
 let total = 0;
 
-//display input
-const addNumOne = (number : number) => {
-    num1 += number;
-    display.value = num1;
-}
+//inputDisplay
 
-const addNumTwo = (number : number) => {
-    num2 += number;
-    display.value = num2;
-}
+operator.forEach(button => {
+    button.addEventListener('click', () => {
+        operators = button.innerText;
+        inputDisplay.value += operators;
+    });
+});
 
-const addOperator = (number : number) => {
-    operators += number;
-    display.value = operators;
-}
-
-buttons.forEach(button => {
+number.forEach(button => {
     button.addEventListener("click", () => {
-        addNumOne(button.innerText);
+        if (operators === "") {
+            num1input += button.innerText
+            inputDisplay.value = num1input;
+        } else {
+            num2input += button.innerText
+            inputDisplay.value = num2input;
+        }
+        console.log(num1input)
+        console.log(operators)        
+        console.log(num2input)
     })
 })
 
-buttons.forEach(button => {
-    button.addEventListener("click", () => {
-        addNumTwo(button.innerText);
-    })
-})
-
-buttons.forEach(button => {
-    button.addEventListener("click", () => {
-        addOperator(button.innerText);
-    })
-})
-///clear btn
+//clear btn
 const clearDisplayInputs = () => {
-    console.log("I am here")
-    console.log(display)
-    console.log(displayTotal)
-    display.value = ""
-    displayTotal.value = "";
-    num1 = '';
+    inputDisplay.value = ""
+    inputDisplayTotal.value = "";
+    num1input = '';
+    num2input = '';
     operators = '';
 }
 
 btnClear.addEventListener('click', clearDisplayInputs);
 
-///operator calculation
+///Calculator operations
 
-const operationsCalculator =  () => {
-    let num1 = number
-    let num2 = number
-
-    switch (operation) {
-      case 'add':
-        result = num1 + num2;
-        break;
-      case 'subtract':
-        result = num1 - num2;
-        break;
-      case 'multiply':
-        result = num1 * num2;
-        break;
-      case 'divide':
-        if (num2 !== 0) {
-          result = num1 / num2;
-        } else {
-          alert('Cannot divide by zero');
-          return;
-        }
-        break;
-      default:
-        alert('Invalid operation');
-        return;
+const handleCalculate = () => {
+    let num1 = parseFloat(num1input)
+    let num2 = parseFloat(num2input)
+    if (operators === "+") {
+        total = num1 + num2
+        total.toString()
+    } else if (operators === "-") {
+        total = num1 - num2
+        total.toString()
+    } else if (operators === "x") {
+        total = num1 * num2
+        total.toString()
+    } else if (operators === "/") {
+        total = num1 / num2
+        total.toString()
+    } else if (operators === "%") {
+        let percentage = (num1 * 100) / num2;
+        total = percentage
+        total.toString()
     }
 
-    document.getElementById('result').innerText = result;
-  }
+    //(num1 * 100) / num2 + "%"; 
+    inputDisplayTotal.innerText = total.toString();
+    num1input = " ";
+    num2input = " ";
+    operators = " ";
+    console.log(total)
+  };
+  
+  btnCalculate.addEventListener("click", handleCalculate);
 
-  operationsCalculator;
+  //decimal 
+
+    
+//   const handleDecimal = () = {
+//     if (condition) {
+        
+//     } else {
+        
+//     }
+//   }
+
+//   btnDecimal.addEventListener("click",handleDecimal)
