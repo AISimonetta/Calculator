@@ -1,6 +1,6 @@
-# Calculator
+# | Calculator Project |
 
-This is the second project created for _nology Full Stack training course.
+-This is the second project created for _nology Full Stack training course.
 
 The aim of this project is to develop a working calculator using all the knowledge acquired till this point which includes :
 
