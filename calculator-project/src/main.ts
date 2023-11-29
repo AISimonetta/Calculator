@@ -35,11 +35,11 @@ number.forEach(button => {
         } else {
             num2input += button.innerText
             inputDisplay.value = num2input;
-        }
-        console.log(num1input)
-        console.log(operators)        
-        console.log(num2input)
-    })
+        };
+        console.log(num1input);
+        console.log(operators);
+        console.log(num2input);
+    });
 })
 
 //clear btn
@@ -56,8 +56,8 @@ btnClear.addEventListener('click', clearDisplayInputs);
 ///Calculator operations
 
 const handleCalculate = () => {
-    let num1 = parseFloat(num1input)
-    let num2 = parseFloat(num2input)
+    let num1 = parseFloat(num1input);
+    let num2 = parseFloat(num2input);
     if (operators === "+") {
         total = num1 + num2
         total.toString()
@@ -74,9 +74,7 @@ const handleCalculate = () => {
         let percentage = (num1 * 100) / num2;
         total = percentage
         total.toString()
-    }
-
-    //(num1 * 100) / num2 + "%"; 
+    };
     inputDisplayTotal.innerText = total.toString();
     num1input = " ";
     num2input = " ";
@@ -84,17 +82,15 @@ const handleCalculate = () => {
     console.log(total)
   };
   
-  btnCalculate.addEventListener("click", handleCalculate);
+btnCalculate.addEventListener("click", handleCalculate);
 
-  //decimal 
+  //limit my btn decimal to onle oy "."
 
-    
-//   const handleDecimal = () = {
-//     if (condition) {
-        
-//     } else {
-        
-//     }
-//   }
+//   let decimalClicked = "."
 
-//   btnDecimal.addEventListener("click",handleDecimal)
+// const onedeDigitDecimal = () => {
+//     if (number === '.' && this.currentOperand.includes('.')) return
+
+// }
+
+// btnDecimal.addEventListener("click", onedeDigitDecimal)
