@@ -13,9 +13,9 @@ if ( !inputDisplay ||!inputDisplayTotal || !number ||!btnClear || !operator ||
      !btnDecimal ||!btnCalculate ) {
     throw new Error("There is a problem with the selector");
 }
-let num1input = '';
-let num2input = '';
-let operators = '';
+let num1input = "";
+let num2input = "";
+let operators = "";
 let total = 0;
 
 //inputDisplay
@@ -64,7 +64,7 @@ const handleCalculate = () => {
     } else if (operators === "-") {
         total = num1 - num2
         total.toString()
-    } else if (operators === "x") {
+    } else if (operators === "X") {
         total = num1 * num2
         total.toString()
     } else if (operators === "/") {
@@ -75,7 +75,7 @@ const handleCalculate = () => {
         total = percentage
         total.toString()
     };
-    inputDisplayTotal.innerText = total.toString();
+    inputDisplayTotal.value = total.toString();
     num1input = " ";
     num2input = " ";
     operators = " ";
@@ -84,13 +84,13 @@ const handleCalculate = () => {
   
 btnCalculate.addEventListener("click", handleCalculate);
 
-  //limit my btn decimal to onle oy "."
+  //limit my btn decimal to only One "."
 
-//   let decimalClicked = "."
+const oneDigitDecimal = () => {
+    alert ("Please press '.' once :)")
+}
+btnDecimal.addEventListener("click", oneDigitDecimal) 
 
-// const onedeDigitDecimal = () => {
-//     if (number === '.' && this.currentOperand.includes('.')) return
 
-// }
 
-// btnDecimal.addEventListener("click", onedeDigitDecimal)
+
