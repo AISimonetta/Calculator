@@ -30,6 +30,12 @@ operator.forEach(button => {
 number.forEach(button => {
     button.addEventListener("click", () => {
         if (operators === "") {
+            if(button.innerText === "." && num1input.includes(".")){
+                return
+            }
+                if(button.innerText === "." && num2input.includes(".")){
+                    return
+                }
             num1input += button.innerText
             inputDisplay.value = num1input;
         } else {
@@ -76,6 +82,7 @@ const handleCalculate = () => {
         total.toString()
     };
     inputDisplayTotal.value = total.toString();
+    inputDisplay.value = ""
     num1input = " ";
     num2input = " ";
     operators = " ";
@@ -86,11 +93,7 @@ btnCalculate.addEventListener("click", handleCalculate);
 
   //limit my btn decimal to only One "."
 
-const oneDigitDecimal = () => {
-    alert ("Please press '.' once :)")
-}
-btnDecimal.addEventListener("click", oneDigitDecimal) 
-
-
-
-
+// const oneDigitDecimal = () => {
+//     alert ("Please press '.' once :)")
+// }
+// btnDecimal.addEventListener("click", oneDigitDecimal) 
