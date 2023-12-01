@@ -5,45 +5,48 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator Project | Alejandra Simonetta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
   </head>
   <body>
-    <main class="Calculator">
-      <div>
-        <label>Display:</label>
-        <input type="number">
-        <label>Total:</label>
-        <input type="number">
+      <div class="containerAnimation">
+        <h1 class="containerAnimation__typed " >Time to do some calculations!</h1>
       </div>
-      <div>
-        <button>AC</button>
-        <button>+/-</button>
-        <button>%</button>
-        <button>/</button>
+      <div class="calculator">
+        <div class="calculator__inputs">
+          <input class="calculator__input calculator__input--userInput" placeholder="0" disabled>
+          <input class="calculator__input calculator__input--total" placeholder="total"  disabled>
+        </div>
+        <div class="calculator__buttons">
+          <button class="calculator__btnFirstRow" id="btnClear">C</button>
+          <button class="calculator__btn calculator__btnFirstRow operator">%</button>
+          <button class="calculator__btn calculator__btnFirstRow operator" id="btnDivide">/</button>
+        </div>
+        <div class="calculator__buttons">
+          <button class="calculator__btnSecRow calculator__btnNum">7</button>
+          <button class="calculator__btnSecRow calculator__btnNum">8</button>
+          <button class="calculator__btnSecRow calculator__btnNum">9</button>
+          <button class="calculator__btnSecRow calculator__btnSecRow--multiplySign operator" id="btnMultiply">X</button>
+        </div>
+        <div class="calculator__buttons">
+          <button class="calculator__btnThirdRow calculator__btnNum">4</button>
+          <button class="calculator__btnThirdRow calculator__btnNum">5</button>
+          <button class="calculator__btnThirdRow calculator__btnNum">6</button>
+          <button class="calculator__btnThirdRow--subtractSign operator" id="btnSubstract">-</button>
+        </div>
+        <div class="calculator__buttons">
+          <button class="calculator__btnFourthRow calculator__btnNum">1</button>
+          <button class="calculator__btnFourthRow calculator__btnNum">2</button>
+          <button class="calculator__btnFourthRow calculator__btnNum">3</button>
+          <button class="calculator__btnFourthRow--addSign operator" id="btnAdd" >+</button>
+        </div>
+        <div class="calculator__buttons">
+          <button class="calculator__btnFifthRow calculator__btnNum">0</button>
+          <button class="calculator__btnFifthRow calculator__btnNum" id="btnDecimal">.</button>
+          <button class="calculator__btnFifthRow " id="btnCalculate" >=</button>
+        </div>
       </div>
-      <div>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>X</button>
-      </div>
-      <div>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>-</button>
-      </div>
-      <div>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>+</button>
-      </div>
-      <div>
-        <button>0</button>
-        <button>.</button>
-        <button>=</button>
-      </div>
-    </main>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
